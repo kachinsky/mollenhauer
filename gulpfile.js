@@ -49,11 +49,11 @@ var isDev = true;
 var path = {
 	project: getDefaultContext('Project'),
 	build: {
-		html: 'doc/',
-		js: 'doc/js',
-		css: 'doc/css',
-		img: 'doc/images',
-		fonts: 'doc/fonts'
+		html: 'docs/',
+		js: 'docs/js',
+		css: 'docs/css',
+		img: 'docs/images',
+		fonts: 'docs/fonts'
 	},
 	src: {
 		html: 'app/workspace/pages/*.html',
@@ -67,7 +67,7 @@ var path = {
 		img: 'app/workspace/images/**/*',
 		fonts: 'app/workspace/fonts/**/*'
 	},
-	clean: 'doc/*'
+	clean: 'docs/*'
 };
 
 function getDefaultContext(defaultName) {
@@ -143,7 +143,7 @@ var config = {
 		spacing: { // Add padding
 			padding: 10
 		},
-		dest: 'doc/images/intermediate-svg' // Keep the intermediate files
+		dest: 'docs/images/intermediate-svg' // Keep the intermediate files
 	},
 	mode: {
 		view: { // Activate the «view» mode
@@ -157,9 +157,9 @@ var config = {
 };
 
 gulp.task('svgSprite', function() {
-	return gulp.src('doc/images/*.svg')
+	return gulp.src('docs/images/*.svg')
 		.pipe(svgSprite(config))
-		.pipe(gulp.dest('doc/images/'))
+		.pipe(gulp.dest('docs/images/'))
 });
 */
 // Generate Sprite icons
@@ -334,7 +334,7 @@ exports.js = js;
 function deploy() {
 	return ( gulp.src(path.build + '**')
 		.pipe(rsync({
-			root: 'doc/',
+			root: 'docs/',
 			hostname: 'username@yousite.com',
 			destination: 'yousite/public_html/',
 			// include: ['*.htaccess'], // Includes files to deploy
