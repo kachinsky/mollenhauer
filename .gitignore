@@ -2,4 +2,5 @@
 /dist
 /.git
 /.idea
+/app/markup
 /package-lock.json
