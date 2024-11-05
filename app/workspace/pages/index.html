@@ -1,0 +1,71 @@
+@@include('template/header.html', {"title": "Home | Mollenhauer"})
+
+<section class="intro-section">
+    <div class="intro-section__bg" style="background-image: url(images/intro-bg.jpg);"></div>
+    <div class="intro-section__decor"></div>
+    <div class="container">
+        <div class="intro-section__row">
+            <div class="intro-section__info">
+                <h1>Civil <strong>Engineering Solutions</strong> For The <strong>Cement</strong> Industry</h1>
+                <p>We are your leading partner for complex brownfield 
+                    construction projects during ongoing operation. </p>
+                <p>Benefit from engineering excellence built on 
+                    more than 30 years of industry experience.</p>
+                <div class="btn-group">
+                    <a href="" class="btn btn--transparent">How can we serve you</a>
+                    <a href="" class="btn btn--white">Contact Us</a>
+                </div>
+            </div>
+            <div class="intro-section__additional">
+                <div class="mosaic-box">
+                    <div class="mosaic-box__item"><div class="mosaic-box__item-label">Ganzheitlich.</div></div>
+                    <div class="mosaic-box__item"><div class="mosaic-box__item-label">Agil.</div></div>
+                    <div class="mosaic-box__item"><div class="mosaic-box__item-label">Zuverlässig.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="servises-section">
+    <div class="container">
+        <div class="servises-section__info">
+            <div class="servises-section__info-inner">
+                <h2>Comprehensive Structural Engineering Services</h2>
+                <p>We accompany you from the first idea of your next construction project from the first idea to successful execution.</p>
+            </div>
+        </div>
+        <div class="servises-section__presentation">
+            <nav class="servises-mosaic">
+                @@include('template/s-mosaic.html', {
+                    "value": "Service and Support", 
+                    "href": "#", 
+                })
+                @@include('template/s-mosaic.html', {
+                    "value": "Preparation of contract award", 
+                    "href": "#", 
+                })
+                @@include('template/s-mosaic.html', {
+                    "value": "Project consulting", 
+                    "href": "#", 
+                })
+                @@include('template/s-mosaic.html', {
+                    "value": "Structural design and execution planning", 
+                    "href": "#", 
+                })
+                @@include('template/s-mosaic.html', {
+                    "value": "Construction site consulting", 
+                    "href": "#", 
+                })
+                @@include('template/s-mosaic.html', {
+                    "value": "Location analysis and feasibility studies", 
+                    "href": "#", 
+                })
+            </nav>
+        </div>
+    </div>
+</section>
+
+@@include('template/footer.html')
+    
+
+
